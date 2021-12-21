@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # General Extensions
-.pdf
+*.pdf
