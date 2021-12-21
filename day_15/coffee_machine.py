@@ -30,13 +30,14 @@ resources = {
     'water': 300,
     'milk': 200,
     'coffee': 100,
-
+    'money': 0
 }
 
 
 def report_resources():
+    # TODO: add context markers for each item
     for value in resources:
-        print(f'{value}:')
+        print(f'{value.capitalize()}: {resources.get(value)}')
 
 
 if __name__ == '__main__':
