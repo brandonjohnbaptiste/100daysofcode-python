@@ -32,13 +32,14 @@ resources = {
     'coffee': 100,
 }
 
-money = 0
+money = 0.0
 
 
 def report_resources():
     for value in resources:
         context_marker = 'ml' if value == 'water' or value == 'mil' else 'g'
         print(f'{value.capitalize()}: {resources.get(value)}{context_marker}')
+    print(f'Money: ${money}')
 
 
 if __name__ == '__main__':
