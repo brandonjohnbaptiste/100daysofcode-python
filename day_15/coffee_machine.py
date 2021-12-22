@@ -43,6 +43,7 @@ def report_resources():
 
 
 def check_resources(drink):
+    # TODO: return messages if a resource is less than required
     water_required = MENU[drink]['ingredients']['water']
     milk_required = MENU[drink]['ingredients']['milk']
     coffee_required = MENU[drink]['ingredients']['coffee']
@@ -52,15 +53,36 @@ def check_resources(drink):
                 and coffee_required <= resources['coffee'])
 
 
+def collect_coins(drink):
+    print('Please insert coins.')
+    quarters = float(input('how many quarters? '))
+    dimes = float(input('how many dimes? '))
+    nickles = float(input('how many nickles? '))
+    pennies = float(input('how many pennies? '))
+
+    total_money = (quarters * 0.25) + (dimes * 0.1) + (nickles * 0.05) + (pennies * 0.01)
+    cost = MENU[drink]['cost']
+
+    change_due = bool(total_money - cost > 0.0)
+    if change_due:
+        print(f'Here is ${total_money - cost:.2f} in change')
+
+    if total_money >= cost:
+        print(f'Here is your {drink} ☕️. Enjoy!')
+    else:
+        print('Sorry that\'s not enough money. Money refunded.')
+
+
 if __name__ == '__main__':
     while True:
-        command = input('What would you like? (espresso/latte/cappuccino: ')
+        command = input('What would you like? (espresso/latte/cappuccino): ')
         if command == 'off':
             break
         elif command == 'report':
             report_resources()
         elif command == 'latte':
-            check_resources('latte')
+            if check_resources('latte'):
+                collect_coins('latte')
         elif command == 'espresso':
             check_resources('espresso')
         elif command == 'cappuccino':
