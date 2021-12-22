@@ -4,6 +4,7 @@ MENU = {
     'espresso': {
         'ingredients': {
             'water': 50,
+            'milk': 0,
             'coffee': 18,
         },
         'cost': 1.5,
@@ -53,21 +54,34 @@ def check_resources(drink):
                 and coffee_required <= resources['coffee'])
 
 
+def make_drink(drink):
+    water_required = MENU[drink]['ingredients']['water']
+    milk_required = MENU[drink]['ingredients']['milk']
+    coffee_required = MENU[drink]['ingredients']['coffee']
+
+    resources['water'] -= water_required
+    resources['milk'] -= milk_required
+    resources['coffee'] -= coffee_required
+
+
 def collect_coins(drink):
+    global money, resources
     print('Please insert coins.')
     quarters = float(input('how many quarters? '))
     dimes = float(input('how many dimes? '))
     nickles = float(input('how many nickles? '))
     pennies = float(input('how many pennies? '))
 
-    total_money = (quarters * 0.25) + (dimes * 0.1) + (nickles * 0.05) + (pennies * 0.01)
+    coin_total = (quarters * 0.25) + (dimes * 0.1) + (nickles * 0.05) + (pennies * 0.01)
     cost = MENU[drink]['cost']
 
-    change_due = bool(total_money - cost > 0.0)
+    change_due = bool(coin_total - cost > 0.0)
     if change_due:
-        print(f'Here is ${total_money - cost:.2f} in change')
+        print(f'Here is ${coin_total - cost:.2f} in change')
 
-    if total_money >= cost:
+    if coin_total >= cost:
+        money += cost
+        make_drink(drink)
         print(f'Here is your {drink} ☕️. Enjoy!')
     else:
         print('Sorry that\'s not enough money. Money refunded.')
@@ -84,6 +98,8 @@ if __name__ == '__main__':
             if check_resources('latte'):
                 collect_coins('latte')
         elif command == 'espresso':
-            check_resources('espresso')
+            if check_resources('espresso'):
+                collect_coins('espresso')
         elif command == 'cappuccino':
-            check_resources('cappuccino')
+           if check_resources('cappuccino'):
+               collect_coins('cappuccino')
