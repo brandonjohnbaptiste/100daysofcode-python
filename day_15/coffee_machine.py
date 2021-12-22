@@ -42,6 +42,16 @@ def report_resources():
     print(f'Money: ${money}')
 
 
+def check_resources(drink):
+    water_required = MENU[drink]['ingredients']['water']
+    milk_required = MENU[drink]['ingredients']['milk']
+    coffee_required = MENU[drink]['ingredients']['coffee']
+
+    return bool(water_required <= resources['water']
+                and milk_required <= resources['milk']
+                and coffee_required <= resources['coffee'])
+
+
 if __name__ == '__main__':
     while True:
         command = input('What would you like? (espresso/latte/cappuccino: ')
@@ -49,3 +59,9 @@ if __name__ == '__main__':
             break
         elif command == 'report':
             report_resources()
+        elif command == 'latte':
+            check_resources('latte')
+        elif command == 'espresso':
+            check_resources('espresso')
+        elif command == 'cappuccino':
+            check_resources('cappuccino')
