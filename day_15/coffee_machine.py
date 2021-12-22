@@ -44,24 +44,16 @@ def report_resources():
 
 
 def check_resources(drink):
-    # TODO: return messages if a resource is less than required
-    water_required = MENU[drink]['ingredients']['water']
-    milk_required = MENU[drink]['ingredients']['milk']
-    coffee_required = MENU[drink]['ingredients']['coffee']
-
-    return bool(water_required <= resources['water']
-                and milk_required <= resources['milk']
-                and coffee_required <= resources['coffee'])
+    for ingredient in MENU[drink]['ingredients']:
+        if MENU[drink]['ingredients'][ingredient] > resources[ingredient]:
+            print(f'Sorry there is not enough {ingredient}')
+            return False
+    return True
 
 
 def make_drink(drink):
-    water_required = MENU[drink]['ingredients']['water']
-    milk_required = MENU[drink]['ingredients']['milk']
-    coffee_required = MENU[drink]['ingredients']['coffee']
-
-    resources['water'] -= water_required
-    resources['milk'] -= milk_required
-    resources['coffee'] -= coffee_required
+    for ingredient in resources:
+        resources[ingredient] -= MENU[drink]['ingredients'][ingredient]
 
 
 def collect_coins(drink):
