@@ -3,4 +3,6 @@
 
 ## Day 15 
  - Installed pycharm and set up virtual environments
- - Coffee Machine task ☕️ - simple coffee machine interface 
+ - Coffee Machine task ☕️ - started working on the system, added the off command and the report command
+## Day 16
+ - Finished the coffee machine task
