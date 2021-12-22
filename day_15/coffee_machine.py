@@ -36,9 +36,9 @@ money = 0
 
 
 def report_resources():
-    # TODO: add context markers for each item
     for value in resources:
-        print(f'{value.capitalize()}: {resources.get(value)}')
+        context_marker = 'ml' if value == 'water' or value == 'mil' else 'g'
+        print(f'{value.capitalize()}: {resources.get(value)}{context_marker}')
 
 
 if __name__ == '__main__':
