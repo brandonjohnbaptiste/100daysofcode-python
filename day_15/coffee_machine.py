@@ -82,6 +82,7 @@ def collect_coins(drink):
 if __name__ == '__main__':
     while True:
         command = input('What would you like? (espresso/latte/cappuccino): ')
+        # TODO: implement a more efficient system for command detection
         if command == 'off':
             break
         elif command == 'report':
