@@ -44,14 +44,16 @@ def report_resources():
 
 
 def check_resources(drink):
+
     for ingredient in MENU[drink]['ingredients']:
-        if MENU[drink]['ingredients'][ingredient] > resources[ingredient]:
+        if MENU[drink]['ingredients'][ingredient] >= resources[ingredient]:
             print(f'Sorry there is not enough {ingredient}')
             return False
     return True
 
 
 def make_drink(drink):
+
     for ingredient in resources:
         resources[ingredient] -= MENU[drink]['ingredients'][ingredient]
 
@@ -82,17 +84,10 @@ def collect_coins(drink):
 if __name__ == '__main__':
     while True:
         command = input('What would you like? (espresso/latte/cappuccino): ')
-        # TODO: implement a more efficient system for command detection
         if command == 'off':
             break
         elif command == 'report':
             report_resources()
-        elif command == 'latte':
-            if check_resources('latte'):
-                collect_coins('latte')
-        elif command == 'espresso':
-            if check_resources('espresso'):
-                collect_coins('espresso')
-        elif command == 'cappuccino':
-           if check_resources('cappuccino'):
-               collect_coins('cappuccino')
+        else:
+            if check_resources(command):
+                collect_coins(command)
