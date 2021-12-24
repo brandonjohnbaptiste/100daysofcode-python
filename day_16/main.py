@@ -13,3 +13,8 @@ if __name__ == '__main__':
         elif cmd == 'report':
             coffee_maker_sys.report()
             money_sys.report()
+        elif cmd == 'latte' or 'espresso' or 'cappuccino':
+            drink = menu.find_drink(cmd)
+            if coffee_maker_sys.is_resource_sufficient(drink):
+                money_sys.make_payment(drink.cost)
+                coffee_maker_sys.make_coffee(drink)
