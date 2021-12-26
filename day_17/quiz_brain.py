@@ -8,4 +8,6 @@ class QuizBrain:
 
     def next_question(self):
         question = self.question_list[self.question_number]
-        user_ans = input(f'Q.{self.question_number + 1}: {question.text} (True/False)?: ')
+        self.question_number += 1
+        user_ans = input(f'Q.{self.question_number}: {question.text} (True/False)?: ')
+
