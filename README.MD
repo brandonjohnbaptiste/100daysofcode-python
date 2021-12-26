@@ -6,3 +6,8 @@
  - Coffee Machine task ☕️ - started working on the system, added the off command and the report command
 ## Day 16
  - Finished the coffee machine task
+ - Finished the turtle example using OOP programming
+ - Created the coffee machine task using classes!
+## Day 17
+ - Created a quiz app using classes
+ - Updated the quiz app to use new questions from the Trivia DB API
