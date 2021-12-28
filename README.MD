@@ -11,3 +11,8 @@
 ## Day 17
  - Created a quiz app using classes
  - Updated the quiz app to use new questions from the Trivia DB API
+## Day 18
+ - All about reading documentation to work things out, used turtle to create some cool stuff!
+ - Created a random walk program using turtle
+ - Created a spirograph program using turtle
+ - Create a hirst spot painting generator using turtle
