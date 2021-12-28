@@ -4,7 +4,7 @@ from colorgram import extract
 from turtle import Turtle, Screen, colormode
 from random import choice
 
-colors_objects = extract('hirst.jpeg', 16)
+colors_objects = extract('pastel.png', 16)
 colors = [(color.rgb.r, color.rgb.b, color.rgb.b) for color in colors_objects]
 dot_size = 20
 colormode(255)
