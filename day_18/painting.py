@@ -7,17 +7,17 @@ timmy = Turtle()
 timmy.home()
 timmy.shape('turtle')
 timmy.color('cornflower blue')
+timmy.pensize(20)
+timmy.speed(0)
 
 colors = ['red', 'black', 'blue', 'yellow', 'pink', 'green', 'purple', 'brown', 'orange']
+directions = [0, 90, 180, 270]
 
-
-shape_side_nums = [n for n in range(3, 11)]
-
-for shape in shape_side_nums:
+for n in range(100):
     timmy.color(choice(colors))
-    for n in range(shape):
-        timmy.forward(100)
-        timmy.right(360 / shape)
+    timmy.setheading(choice(directions))
+    timmy.forward(40)
+
 
 screen = Screen()
 screen.exitonclick()
