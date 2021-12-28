@@ -1,7 +1,9 @@
 #!/usr/bin/evn python3
-
+import turtle
 from turtle import Turtle, Screen
-from random import choice
+from random import choice, randint
+
+turtle.colormode(255)
 
 timmy = Turtle()
 timmy.home()
@@ -10,13 +12,13 @@ timmy.color('cornflower blue')
 timmy.pensize(20)
 timmy.speed(0)
 
-colors = ['red', 'black', 'blue', 'yellow', 'pink', 'green', 'purple', 'brown', 'orange']
 directions = [0, 90, 180, 270]
 
-for n in range(100):
-    timmy.color(choice(colors))
+for n in range(200):
+    rand_color = (randint(0, 255), randint(0, 255), randint(0, 255))
+    timmy.color(rand_color)
     timmy.setheading(choice(directions))
-    timmy.forward(40)
+    timmy.forward(30)
 
 
 screen = Screen()
