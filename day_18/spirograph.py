@@ -1,18 +1,22 @@
 #!/usr/bin/evn python3
 from turtle import Turtle, Screen, colormode
-from random import randint
+from random import choice
+from colorgram import extract
 
 colormode(255)
 
 timmy = Turtle()
-timmy.speed('fastest')
+timmy.speed(0)
+timmy.hideturtle()
 
-rotation = 5
+rotation = 3
 amount_of_rotations = int(360 / rotation)
 
 
 def random_color():
-    return randint(0, 255), randint(0, 255), randint(0, 255)
+    color_objects = extract('pastel.png', 15)
+    colors = [(color.rgb.r, color.rgb.g, color.rgb.b) for color in color_objects]
+    return choice(colors)
 
 
 for n in range(amount_of_rotations):
