@@ -6,9 +6,11 @@ timmy = Turtle()
 timmy.shape('turtle')
 timmy.color('cornflower blue')
 
-for n in range(4):
-    timmy.forward(100)
-    timmy.right(90)
+for n in range(10):
+    timmy.pendown()
+    timmy.forward(10)
+    timmy.penup()
+    timmy.forward(10)
 
 
 screen = Screen()
