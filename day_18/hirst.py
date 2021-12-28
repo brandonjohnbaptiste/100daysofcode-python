@@ -13,6 +13,7 @@ initial_x = -250
 initial_y = -200
 
 turtle = Turtle()
+turtle.hideturtle()
 turtle.penup()
 turtle.setposition(initial_x, initial_y)
 
@@ -25,6 +26,7 @@ for y in range(10):
         turtle.dot(dot_size, choice(colors))
         turtle.penup()
         turtle.setx(turtle.xcor() + 50)
+
 
 screen = Screen()
 screen.exitonclick()
