@@ -1,9 +1,8 @@
 #!/usr/bin/evn python3
-import turtle
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, colormode
 from random import randint
 
-turtle.colormode(255)
+colormode(255)
 
 timmy = Turtle()
 timmy.speed('fastest')
