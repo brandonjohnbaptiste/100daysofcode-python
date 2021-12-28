@@ -18,7 +18,6 @@ turtle.penup()
 turtle.setposition(initial_x, initial_y)
 
 for y in range(10):
-    print(f'Printing row {y}')
     turtle.sety(initial_y + (y * 50))
     turtle.setx(initial_x)
     for x in range(10):
