@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from turtle import Turtle, Screen
+from random import randint
 
 screen = Screen()
 screen.setup(width=500, height=400)
@@ -33,5 +34,16 @@ for racer in turtles:
     racer.setpos(x=init_x, y=(init_y + offset))
     offset += 50
 
+racing = True
+while racing:
+    for turtle in turtles:
+        if turtle.xcor() > 210:
+            racing = False
+            if user_bet == turtle.pencolor():
+                print(f'You\'ve won! The {turtle.pencolor()} turtle is the winner!')
+            else:
+                print(f'You\'ve lost. The {turtle.pencolor()} turtle is the winner!')
+
+        turtle.forward(randint(0, 10))
 
 screen.exitonclick()
