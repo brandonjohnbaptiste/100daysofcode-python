@@ -16,14 +16,7 @@ def create_turtle(color):
     return turtle
 
 
-red_turtle = create_turtle('red')
-orange_turtle = create_turtle('orange')
-yellow_turtle = create_turtle('yellow')
-green_turtle = create_turtle('green')
-blue_turtle = create_turtle('blue')
-purple_turtle = create_turtle('purple')
-
-turtles = [red_turtle, orange_turtle, yellow_turtle, green_turtle, blue_turtle, purple_turtle]
+turtles = [create_turtle(color) for color in colors]
 
 offset = 0
 init_x = -230
@@ -40,9 +33,9 @@ while racing:
         if turtle.xcor() > 210:
             racing = False
             if user_bet == turtle.pencolor():
-                print(f'You\'ve won! The {turtle.pencolor()} turtle is the winner!')
+                print(f'You\'ve won! The {turtle.pencolor()} turtle was the winner!')
             else:
-                print(f'You\'ve lost. The {turtle.pencolor()} turtle is the winner!')
+                print(f'You\'ve lost. The {turtle.pencolor()} turtle was the winner!')
 
         turtle.forward(randint(0, 10))
 
