@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from turtle import Turtle, Screen
+from time import sleep
 
 screen_height = 600
 screen_width = 600
@@ -29,9 +30,20 @@ for part in snake_body:
 
 if __name__ == '__main__':
     game_running = True
+
     while game_running:
-        for part in snake_body:
-            part.forward(1)
         screen.update()
+        sleep(0.1)
+
+        for part_index in range(len(snake_body) - 1, 0, -1):
+            new_x = snake_body[part_index - 1].xcor()
+            new_y = snake_body[part_index - 1].ycor()
+            snake_body[part_index].goto(x=new_x, y=new_y)
+
+        snake_body[0].forward(20)
+
+
+
+
 
 screen.exitonclick()
