@@ -16,3 +16,7 @@
  - Created a random walk program using turtle
  - Created a spirograph program using turtle
  - Create a hirst spot painting generator using turtle
+## Day 19
+ - More programs with turtle
+ - Created an etch-a-sketch program
+ - Created a turtle race program
