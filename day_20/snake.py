@@ -9,20 +9,29 @@ screen = Screen()
 screen.setup(width=screen_width, height=screen_height)
 screen.bgcolor('black')
 screen.title('Snake')
+screen.tracer(0)
 
 
-def create_turtle():
+def create_body_part():
     t = Turtle(shape='square')
     t.color('white')
+    t.penup()
     return t
 
 
-turtles = [create_turtle() for i in range(3)]
+snake_body = [create_body_part() for i in range(3)]
 init_x = 0
 init_y = 0
 offset = 20
 
-for turtle in turtles:
-    turtle.setpos(x=(init_x - (offset * turtles.index(turtle))), y=init_y)
+for part in snake_body:
+    part.setpos(x=(init_x - (offset * snake_body.index(part))), y=init_y)
+
+if __name__ == '__main__':
+    game_running = True
+    while game_running:
+        for part in snake_body:
+            part.forward(1)
+        screen.update()
 
 screen.exitonclick()
