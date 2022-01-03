@@ -20,3 +20,8 @@
  - More programs with turtle
  - Created an etch-a-sketch program
  - Created a turtle race program
+
+## Day 20
+- Started work on the game Snake
+- Create the snake class 
+- Added moving the snake with the arrow keys
