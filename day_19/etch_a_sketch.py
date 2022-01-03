@@ -3,6 +3,7 @@
 from turtle import Turtle, Screen, clearscreen
 
 turtle = Turtle()
+turtle.speed(0)
 screen = Screen()
 
 
@@ -33,5 +34,6 @@ if __name__ == '__main__':
     screen.onkey(key='a', fun=move_left)
     screen.onkey(key='d', fun=move_right)
     screen.onkey(key='c', fun=clear_screen)
-
     screen.exitonclick()
+
+
