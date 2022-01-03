@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
-from turtle import Turtle, Screen
+from turtle import Screen
 from snake import Snake
 from time import sleep
 
-screen_height = 600
-screen_width = 600
+SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 600
 
 screen = Screen()
-screen.setup(width=screen_width, height=screen_height)
+screen.setup(width=SCREEN_WIDTH, height=SCREEN_HEIGHT)
 screen.bgcolor('black')
 screen.title('Snake')
 screen.tracer(0)
@@ -25,9 +25,4 @@ if __name__ == '__main__':
         snake.move()
 
 
-
-
-
-
-
-screen.exitonclick()
+    screen.exitonclick()
