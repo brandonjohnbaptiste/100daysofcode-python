@@ -15,6 +15,7 @@ def create_body_part():
 class Snake:
     def __init__(self):
         self.snake_body = [create_body_part() for i in range(3)]
+        self.head = self.snake_body[0]
 
         init_x = 0
         init_y = 0
@@ -28,16 +29,16 @@ class Snake:
             new_y = self.snake_body[part_index - 1].ycor()
             self.snake_body[part_index].goto(x=new_x, y=new_y)
 
-        self.snake_body[0].forward(MOVE_DISTANCE)
+        self.head.forward(MOVE_DISTANCE)
 
     def up(self):
-        self.snake_body[0].setheading(90)
+        self.head.setheading(90)
 
     def down(self):
-        self.snake_body[0].setheading(270)
+        self.head.setheading(270)
 
     def left(self):
-        self.snake_body[0].setheading(180)
+        self.head.setheading(180)
 
     def right(self):
-        self.snake_body[0].setheading(0)
+        self.head.setheading(0)
