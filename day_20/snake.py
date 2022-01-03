@@ -1,6 +1,6 @@
 #!/usr/bin/evn3 python3
 
-def create_body_part(self):
+def create_body_part():
     from turtle import Turtle
     t = Turtle(shape='square')
     t.color('white')
