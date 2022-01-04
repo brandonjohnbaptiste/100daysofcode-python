@@ -32,8 +32,10 @@ class Snake:
             new_x = self.snake_body[part_index - 1].xcor()
             new_y = self.snake_body[part_index - 1].ycor()
             self.snake_body[part_index].goto(x=new_x, y=new_y)
-
         self.head.forward(MOVE_DISTANCE)
+
+    def add_body_part(self):
+        self.snake_body.append(create_body_part())
 
     def up(self):
         if self.head.heading() != DOWN:
