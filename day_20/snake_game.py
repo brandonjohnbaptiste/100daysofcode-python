@@ -3,6 +3,7 @@
 from turtle import Screen
 from snake import Snake
 from food import Food
+from score import Score
 from time import sleep
 
 SCREEN_HEIGHT = 600
@@ -17,6 +18,9 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 
+score = Score()
+score.display_score()
+
 screen.listen()
 screen.onkey(snake.up, 'Up')
 screen.onkey(snake.down, 'Down')
@@ -27,12 +31,15 @@ if __name__ == '__main__':
     game_running = True
 
     while game_running:
-        screen.update()
         sleep(0.1)
         snake.move()
 
         if snake.head.distance(food) < 15:
             food.new_location()
             snake.add_body_part()
+            score.update_score()
+            score.display_score()
+
+        screen.update()
 
     screen.exitonclick()
