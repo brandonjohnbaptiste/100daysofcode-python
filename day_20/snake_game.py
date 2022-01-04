@@ -38,7 +38,6 @@ if __name__ == '__main__':
             food.new_location()
             snake.add_body_part()
             score.update_score()
-            score.display_score()
 
         screen.update()
 

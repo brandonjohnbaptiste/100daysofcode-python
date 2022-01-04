@@ -14,6 +14,7 @@ class Score(Turtle):
 
     def update_score(self):
         self.score += 1
+        self.display_score()
 
     def display_score(self):
         self.clear()
