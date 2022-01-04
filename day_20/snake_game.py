@@ -2,6 +2,7 @@
 
 from turtle import Screen
 from snake import Snake
+from food import Food
 from time import sleep
 
 SCREEN_HEIGHT = 600
@@ -14,6 +15,7 @@ screen.title('Snake')
 screen.tracer(0)
 
 snake = Snake()
+food = Food()
 
 screen.listen()
 screen.onkey(snake.up, 'Up')
@@ -29,6 +31,5 @@ if __name__ == '__main__':
         sleep(0.1)
 
         snake.move()
-
 
     screen.exitonclick()
