@@ -29,7 +29,10 @@ if __name__ == '__main__':
     while game_running:
         screen.update()
         sleep(0.1)
-
         snake.move()
+
+        if snake.head.distance(food) < 15:
+            food.new_location()
+            snake.add_body_part()
 
     screen.exitonclick()
