@@ -29,11 +29,11 @@ def clear_screen():
 
 if __name__ == '__main__':
     screen.listen()
-    screen.onkey(key='w', fun=move_forward)
-    screen.onkey(key='s', fun=move_backward)
-    screen.onkey(key='a', fun=move_left)
-    screen.onkey(key='d', fun=move_right)
-    screen.onkey(key='c', fun=clear_screen)
+    screen.onkeypress(key='w', fun=move_forward)
+    screen.onkeypress(key='s', fun=move_backward)
+    screen.onkeypress(key='a', fun=move_left)
+    screen.onkeypress(key='d', fun=move_right)
+    screen.onkeypress(key='c', fun=clear_screen)
     screen.exitonclick()
 
 
