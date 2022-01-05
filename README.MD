@@ -25,3 +25,8 @@
 - Started work on the game Snake
 - Create the snake class 
 - Added moving the snake with the arrow keys
+
+# Day 21
+- Added food class for snake game
+- Added score class for snake game
+- Finished working snake game 🎉
