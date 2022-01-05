@@ -22,10 +22,10 @@ score = Score()
 score.display_score()
 
 screen.listen()
-screen.onkey(snake.up, 'Up')
-screen.onkey(snake.down, 'Down')
-screen.onkey(snake.left, 'Left')
-screen.onkey(snake.right, 'Right')
+screen.onkeypress(snake.up, 'Up')
+screen.onkeypress(snake.down, 'Down')
+screen.onkeypress(snake.left, 'Left')
+screen.onkeypress(snake.right, 'Right')
 
 if __name__ == '__main__':
     game_running = True
