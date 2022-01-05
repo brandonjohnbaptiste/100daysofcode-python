@@ -18,7 +18,7 @@ class Score(Turtle):
 
     def game_over(self):
         self.sety(0)
-        self.write('Game Over.', align=ALIGN, font=FONT)
+        self.write('GAME OVER.', align=ALIGN, font=FONT)
 
     def update_score(self):
         self.score += 1

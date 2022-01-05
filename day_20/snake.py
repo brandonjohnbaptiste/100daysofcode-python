@@ -35,7 +35,9 @@ class Snake:
         self.head.forward(MOVE_DISTANCE)
 
     def add_body_part(self):
+        new_pos = self.snake_body[-1].pos()
         self.snake_body.append(create_body_part())
+        self.snake_body[-1].setpos(new_pos)
 
     def up(self):
         if self.head.heading() != DOWN:

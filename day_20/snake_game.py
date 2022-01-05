@@ -42,6 +42,13 @@ if __name__ == '__main__':
         if abs(snake.head.xcor()) > 280 or abs(snake.head.ycor()) > 280:
             game_running = False
             score.game_over()
-        screen.update()
 
+        snake_trail = snake.snake_body[1:]
+        for part in snake_trail:
+            if snake.head.distance(part) < 10:
+                game_running = False
+                score.game_over()
+
+        screen.update()
     screen.exitonclick()
+
