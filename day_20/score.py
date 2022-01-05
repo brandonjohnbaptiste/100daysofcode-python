@@ -2,6 +2,9 @@
 
 from turtle import Turtle
 
+FONT = ('Arial', 24, 'normal')
+ALIGN = 'center'
+
 
 class Score(Turtle):
 
@@ -9,8 +12,13 @@ class Score(Turtle):
         super().__init__()
         self.score = 0
         self.color('white')
+        self.penup()
         self.sety(270)
         self.hideturtle()
+
+    def game_over(self):
+        self.sety(0)
+        self.write('Game Over.', align=ALIGN, font=FONT)
 
     def update_score(self):
         self.score += 1
@@ -18,4 +26,4 @@ class Score(Turtle):
 
     def display_score(self):
         self.clear()
-        self.write(f'Score: {self.score}', align='center', font=('Arial', 20, 'normal'))
+        self.write(f'Score: {self.score}', align=ALIGN, font=FONT)

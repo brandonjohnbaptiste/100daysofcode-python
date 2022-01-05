@@ -39,6 +39,9 @@ if __name__ == '__main__':
             snake.add_body_part()
             score.update_score()
 
+        if abs(snake.head.xcor()) > 280 or abs(snake.head.ycor()) > 280:
+            game_running = False
+            score.game_over()
         screen.update()
 
     screen.exitonclick()
