@@ -4,6 +4,7 @@ from turtle import Turtle
 
 PADDLE_COLOR = 'white'
 TURTLE_SIZE_DEFAULT = 20
+MOVE_DISTANCE = 30
 
 
 class Paddle(Turtle):
@@ -14,3 +15,8 @@ class Paddle(Turtle):
         self.shape('square')
         self.penup()
 
+    def up(self):
+        self.sety(self.ycor() + MOVE_DISTANCE)
+
+    def down(self):
+        self.sety(self.ycor() - MOVE_DISTANCE)
