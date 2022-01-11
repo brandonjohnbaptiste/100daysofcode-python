@@ -9,7 +9,6 @@ class Ball(Turtle):
         self.shape('circle')
         self.color('white')
         self.penup()
-        self.travelling = 'left'
 
     def move(self):
         self.forward(5)
@@ -17,8 +16,3 @@ class Ball(Turtle):
     def move_right(self):
         self.setheading(self.heading() + 20)
 
-    def rebound(self):
-        if self.travelling == 'left':
-            self.travelling = 'right'
-        else:
-            self.travelling = 'left'
