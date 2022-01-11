@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from turtle import Screen
-from random import getrandbits
 from paddle import Paddle
 from ball import Ball
 
@@ -13,6 +12,7 @@ screen = Screen()
 screen.setup(width=WIDTH, height=HEIGHT)
 screen.bgcolor(COLOR)
 screen.title('Pong!')
+screen.tracer(0)
 
 left_paddle = Paddle(width=20, height=100)
 left_paddle.setx(-350)
@@ -26,9 +26,22 @@ screen.listen()
 screen.onkeypress(left_paddle.up, 'Up')
 screen.onkeypress(left_paddle.down, 'Down')
 
-ball.setheading(45)
+ball.setheading(-115)
 while True:
+    screen.update()
+
+    if ball.xcor() < -380:
+        ball.bounce()
+        ball.travelling = 'right'
+    elif ball.xcor() > 380:
+        ball.bounce()
+        ball.travelling = 'left'
+
     ball.move()
+
+    if abs(ball.ycor()) > 280:
+        ball.bounce()
+
 
 screen.exitonclick()
 

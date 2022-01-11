@@ -9,10 +9,18 @@ class Ball(Turtle):
         self.shape('circle')
         self.color('white')
         self.penup()
+        self.speed('fastest')
+        self.travelling = 'left'
 
     def move(self):
-        self.forward(5)
+        if self.travelling == 'left':
+            self.forward(3)
+        elif self.travelling == 'right':
+            self.backward(3)
 
     def move_right(self):
         self.setheading(self.heading() + 20)
 
+    def bounce(self):
+        new_heading = self.heading() * -1
+        self.setheading(new_heading)
