@@ -10,12 +10,12 @@ class Ball(Turtle):
         self.color('white')
         self.penup()
         self.speed('fastest')
-        self.travelling = 'left'
+        self.travelling = -1
 
     def move(self):
-        if self.travelling == 'left':
+        if self.travelling == -1:
             self.forward(3)
-        elif self.travelling == 'right':
+        elif self.travelling == 1:
             self.backward(3)
 
     def move_right(self):

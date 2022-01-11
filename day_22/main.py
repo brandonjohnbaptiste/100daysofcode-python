@@ -30,12 +30,13 @@ ball.setheading(-115)
 while True:
     screen.update()
 
-    if ball.xcor() < -380:
+    if abs(ball.xcor()) > 380:
         ball.bounce()
-        ball.travelling = 'right'
-    elif ball.xcor() > 380:
+        ball.travelling *= -1
+
+    if ball.distance(left_paddle) < 25:
         ball.bounce()
-        ball.travelling = 'left'
+        ball.travelling *= -1
 
     ball.move()
 
