@@ -20,3 +20,4 @@ class Paddle(Turtle):
 
     def down(self):
         self.sety(self.ycor() - MOVE_DISTANCE)
+

@@ -26,22 +26,23 @@ screen.listen()
 screen.onkeypress(left_paddle.up, 'Up')
 screen.onkeypress(left_paddle.down, 'Down')
 
+screen.onkeypress(right_paddle.up, 'w')
+screen.onkeypress(right_paddle.down, 's')
+
 ball.setheading(-115)
 while True:
     screen.update()
 
-    if abs(ball.xcor()) > 380:
+    if ball.distance(left_paddle) < 40 or ball.distance(right_paddle) < 40 and ball.xcor() > 320:
         ball.bounce()
         ball.travelling *= -1
-
-    if ball.distance(left_paddle) < 25:
-        ball.bounce()
-        ball.travelling *= -1
-
-    ball.move()
 
     if abs(ball.ycor()) > 280:
         ball.bounce()
+
+    ball.move()
+
+
 
 
 screen.exitonclick()
