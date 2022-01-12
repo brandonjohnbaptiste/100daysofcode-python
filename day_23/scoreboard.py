@@ -2,7 +2,7 @@
 
 from turtle import Turtle
 
-FONT = ('Courier', 80, 'normal')
+FONT = ('Courier', 25, 'normal')
 
 
 class Scoreboard(Turtle):
@@ -10,7 +10,7 @@ class Scoreboard(Turtle):
         super().__init__()
         self.color('black')
         self.hideturtle()
-        self.level = 0
+        self.level = 1
         self.penup()
-        self.setpos(-280, 260)
-        self.write(self.level, font=FONT)
+        self.setpos(-285, 250)
+        self.write(f'Level: {self.level}', font=FONT)
