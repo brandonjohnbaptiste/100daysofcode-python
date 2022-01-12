@@ -30,3 +30,7 @@
 - Added food class for snake game
 - Added score class for snake game
 - Finished working snake game 🎉
+
+# Day 22
+- First attempt at making the challenge with little input
+- Finished pong game!
