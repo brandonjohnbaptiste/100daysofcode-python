@@ -34,3 +34,7 @@
 # Day 22
 - First attempt at making the challenge with little input
 - Finished pong game!
+
+# Day 23
+- First big challenge of building with little prompt
+- Completed a working version of the game!!!!
