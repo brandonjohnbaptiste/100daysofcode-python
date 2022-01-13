@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from turtle import Turtle
 
 STARTING_POS = -250
