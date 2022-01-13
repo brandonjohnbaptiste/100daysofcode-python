@@ -17,7 +17,7 @@ screen.tracer(0)
 
 player = Player()
 scoreboard = Scoreboard()
-car_clusters = [CarManager()]
+car_clusters = [CarManager(0)]
 
 if __name__ == '__main__':
     screen.listen()
@@ -25,19 +25,30 @@ if __name__ == '__main__':
 
     running = True
     loop = 1
+    level = 0
+
     while running:
         screen.update()
         sleep(0.05)
 
         for cluster in car_clusters:
             cluster.move_cluster()
+            for car in cluster.cars:
+                if player.distance(car) < 20:
+                    scoreboard.game_over()
+                    running = False
 
         if player.ycor() > 280:
             scoreboard.next_level()
             player.next_level()
+            for cluster in car_clusters:
+                cluster.next_level()
 
-        if loop % 50 == 0:
-            car_clusters.append(CarManager())
+            level += 1
+
+        if loop % 25 == 0:
+            for i in range(level):
+                car_clusters.append(CarManager(level))
 
         loop += 1
 screen.exitonclick()

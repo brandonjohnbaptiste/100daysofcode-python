@@ -2,7 +2,6 @@
 from turtle import Turtle
 
 COLOURS = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
-MOVE_SPEED = 5
 
 
 class Car(Turtle):
@@ -15,8 +14,8 @@ class Car(Turtle):
         self.color(choice(COLOURS))
         self.random_start_pos()
 
-    def move(self):
-        self.backward(MOVE_SPEED)
+    def move(self, move_speed):
+        self.backward(move_speed)
 
     def random_start_pos(self):
         from random import randint
