@@ -38,3 +38,8 @@
 # Day 23
 - First big challenge of building with little prompt
 - Completed a working version of the game!!!!
+
+## Day 24
+- All about reading and writing data from files
+- Updated the snake game to have a high score that's saved to a file
+- Created an automatic letter creation script
