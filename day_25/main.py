@@ -9,8 +9,7 @@ def avg(lst):
 
 if __name__ == '__main__':
     data = read_csv('weather_data.csv')
-
-    temp = data['temp'].to_list()
-    avg_temp = avg(temp)
+    avg_temp = data['temp'].mean()
     print(f'The average temperature was: {avg_temp:.2f}')
+
 
