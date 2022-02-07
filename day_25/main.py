@@ -4,4 +4,8 @@ from pandas import read_csv
 
 if __name__ == '__main__':
     data = read_csv('weather_data.csv')
-    print(data['temp'])
+    data_dict = data.to_dict()
+    print(data_dict)
+
+    temp = data['temp'].to_list()
+    print(temp)
