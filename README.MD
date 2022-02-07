@@ -26,16 +26,16 @@
 - Create the snake class 
 - Added moving the snake with the arrow keys
 
-# Day 21
+## Day 21
 - Added food class for snake game
 - Added score class for snake game
 - Finished working snake game 🎉
 
-# Day 22
+## Day 22
 - First attempt at making the challenge with little input
 - Finished pong game!
 
-# Day 23
+## Day 23
 - First big challenge of building with little prompt
 - Completed a working version of the game!!!!
 
