@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-
-from pandas import read_csv
+from pandas import read_csv, DataFrame
 
 if __name__ == '__main__':
     data = read_csv('Squirrel_Census.csv')
@@ -17,7 +16,12 @@ if __name__ == '__main__':
         if colour in fur_colours:
             fur_colours[colour] += 1
 
-    print(fur_colours)
+    csv_data = {
+        'Fur Colour': ['Black', 'Gray', 'Cinnamon'],
+        'Count': [count for count in fur_colours.values()]
+    }
+    formatted_data = DataFrame(csv_data)
+    formatted_data.to_csv('fur_count.csv')
 
 
 
