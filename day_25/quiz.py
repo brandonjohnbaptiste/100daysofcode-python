@@ -41,6 +41,6 @@ if __name__ == '__main__':
                 correct_guesses.append(ans)
                 display_correct_state(state)
 
-            guessing = not len(correct_guesses) == 50
+        guessing = not len(correct_guesses) == 50
 
     screen.exitonclick()
