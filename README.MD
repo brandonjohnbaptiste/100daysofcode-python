@@ -43,3 +43,8 @@
 - All about reading and writing data from files
 - Updated the snake game to have a high score that's saved to a file
 - Created an automatic letter creation script
+
+## Day 25
+- First time using the pandas library
+- Using panda classes for data manipulation
+- Created a us states quiz with a gui
