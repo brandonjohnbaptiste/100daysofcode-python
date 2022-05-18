@@ -13,7 +13,7 @@ text_input.pack()
 
 
 def button_clicked():
-    text_label["text"] = 'The button has been clicked'
+    text_label["text"] = text_input.get()
 
 
 btn = Button(text='Click me', command=button_clicked)
