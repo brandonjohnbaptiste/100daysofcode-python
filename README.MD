@@ -48,3 +48,10 @@
 - First time using the pandas library
 - Using panda classes for data manipulation
 - Created a us states quiz with a gui
+
+## Day 26
+- Created a nato alphabet generator using dictionary comprehension
+
+## Day 27
+- Created a basic application using Tkinter to dynamically update the text
+- 
