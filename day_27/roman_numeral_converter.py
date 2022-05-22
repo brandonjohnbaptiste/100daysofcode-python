@@ -15,12 +15,10 @@ def roman_to_int(s):
 
         if symbol + symbols[symbols.index(symbol) + 1] in subtract:
             result += nums.get(symbols[symbols.index(symbol) + 1]) - nums.get(symbol)
-            print(nums.get(symbols[symbols.index(symbol) + 1]) - nums.get(symbol))
             i += 1
         else:
             result += nums.get(symbol)
-            print(nums.get(symbol))
 
         i += 1
 
-    print(result)
+    return result
