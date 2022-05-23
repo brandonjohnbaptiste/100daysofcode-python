@@ -1,22 +1,23 @@
+from math import floor
 from tkinter import Tk, Entry, Label, Button, StringVar
 
 
-
 kilometer = 0
-arial = ('Arial', 20, 'normal')
+arial = ('Arial', 15, 'normal')
 
 
 def calculate_kilometer(mile):
     global kilometer
-    kilometer = mile * 1.609
+    kilometer = floor(float(mile) * 1.609)
 
 
 window = Tk()
 window.title('Mile to Km Converter')
+window.config(padx=20, pady=20)
 
 miles = StringVar()
 
-txt_input = Entry(window, textvariable=miles, width=25)
+txt_input = Entry(window, textvariable=miles, width=10)
 miles_label = Label(window, text='Miles', font=arial)
 equal_to = Label(window, text='is equal to', font=arial)
 kilometer_display = Label(window, text=kilometer, font=arial)
