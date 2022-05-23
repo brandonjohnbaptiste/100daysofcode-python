@@ -9,6 +9,7 @@ arial = ('Arial', 15, 'normal')
 def calculate_kilometer(mile):
     global kilometer
     kilometer = floor(float(mile) * 1.609)
+    kilometer_display['text'] = kilometer
 
 
 window = Tk()
