@@ -57,3 +57,6 @@
 - Created a roman numeral converter for leetcode challenge
 - Created a GUI application using the grid layout methods
 - Created a miles to kilometer application with a GUI
+
+# Day 28
+- Create a function for counting the amount of odd numbers in a range
