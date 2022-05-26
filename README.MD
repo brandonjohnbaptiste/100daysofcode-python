@@ -1,5 +1,6 @@
 # 100 Days of Code - Python 🐍
 100 days of code challenge using The Complete Python Pro Bootcamp for 2022 as the guide for each day
+in addition to leetcode challenges
 
 ## Day 15 
  - Installed pycharm and set up virtual environments
@@ -61,3 +62,4 @@
 # Day 28
 - Create a function for counting the amount of odd numbers in a range
 - Created a function for calculating the hamming weight of an int
+- Created a function for calculating the maximum perimeter of a triangle given a list of sides
