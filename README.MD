@@ -63,3 +63,4 @@ in addition to leetcode challenges
 - Create a function for counting the amount of odd numbers in a range
 - Created a function for calculating the hamming weight of an int
 - Created a function for calculating the maximum perimeter of a triangle given a list of sides
+- Created a function for determing the sign of the product of an array
