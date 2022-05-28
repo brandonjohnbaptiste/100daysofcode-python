@@ -64,3 +64,4 @@ in addition to leetcode challenges
 - Created a function for calculating the hamming weight of an int
 - Created a function for calculating the maximum perimeter of a triangle given a list of sides
 - Created a function for determing the sign of the product of an array
+- Created a function for finding 'happy' numbers
