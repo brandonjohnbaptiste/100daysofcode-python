@@ -9,7 +9,13 @@ def is_happy(n):
         for i in digits:
             sum += i * i
 
-        print(sum)
-        break
+        if sum in prev_num:
+            break
+        if sum == 1:
+            happy = True
 
-is_happy(12345)
+        n = sum
+        prev_num.append(sum)
+
+
+is_happy(19)
