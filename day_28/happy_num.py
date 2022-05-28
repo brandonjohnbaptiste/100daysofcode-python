@@ -9,6 +9,7 @@ def is_happy(n):
         for i in digits:
             sum += i * i
 
-        print(i)
+        print(sum)
+        break
 
 is_happy(12345)
