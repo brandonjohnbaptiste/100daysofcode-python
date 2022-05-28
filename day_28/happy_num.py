@@ -10,12 +10,11 @@ def is_happy(n):
             sum += i * i
 
         if sum in prev_num:
-            break
+            return False
         if sum == 1:
             happy = True
+            return True
 
         n = sum
         prev_num.append(sum)
 
-
-is_happy(19)
