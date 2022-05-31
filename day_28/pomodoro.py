@@ -13,6 +13,10 @@ WIDTH = 200
 HEIGHT = 224
 
 
+def start_counter():
+    count_down(5)
+
+
 window = Tk()
 window.title('Pomodoro App')
 window.config(padx=100, pady=50)
@@ -24,7 +28,7 @@ img = PhotoImage(file='tomato.png')
 canvas.create_image(WIDTH/2 + 3, HEIGHT/2, image=img)
 timer = canvas.create_text(WIDTH/2, HEIGHT/2 + 20, text='00:00', fill='white', font=(FONT_NAME, 35, 'bold'))
 
-start_btn = Button(window, text='Start')
+start_btn = Button(window, text='Start', command=start_counter)
 reset_btn = Button(window, text='Reset')
 tick_label = Label(window, text='✔', fg=GREEN)
 
@@ -41,8 +45,7 @@ def count_down(count):
         window.after(1000, count_down, count - 1)
 
 
-def start_counter():
-    count_down(5)
+
 
 
 window.mainloop()
