@@ -20,6 +20,7 @@ window.config(padx=100, pady=50)
 canvas = Canvas(width=WIDTH, height=HEIGHT)
 img = PhotoImage(file='tomato.png')
 canvas.create_image(WIDTH/2 + 3, HEIGHT/2, image=img)
+canvas.create_text(WIDTH/2, HEIGHT/2 + 20, text='00:00', fill='white', font=(FONT_NAME, 35, 'bold'))
 canvas.pack()
 
 window.mainloop()
