@@ -17,7 +17,7 @@ window = Tk()
 window.title('Pomodoro App')
 window.config(padx=100, pady=50)
 
-timer_label = Label(window, text='Timer', font=(FONT_NAME, 50, 'bold'))
+timer_label = Label(window, text='Timer', font=(FONT_NAME, 50, 'bold'), fg=GREEN)
 
 canvas = Canvas(window, width=WIDTH, height=HEIGHT)
 img = PhotoImage(file='tomato.png')
@@ -26,7 +26,7 @@ canvas.create_text(WIDTH/2, HEIGHT/2 + 20, text='00:00', fill='white', font=(FON
 
 start_btn = Button(window, text='Start')
 reset_btn = Button(window, text='Reset')
-tick_label = Label(window, text='✔')
+tick_label = Label(window, text='✔', fg=GREEN)
 
 timer_label.grid(column=1, row=0)
 canvas.grid(column=1, row=1)
