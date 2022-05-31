@@ -15,10 +15,11 @@ HEIGHT = 224
 
 window = Tk()
 window.title('Pomodoro App')
+window.config(padx=100, pady=50)
 
 canvas = Canvas(width=WIDTH, height=HEIGHT)
 img = PhotoImage(file='tomato.png')
-canvas.create_image(WIDTH/2, HEIGHT/2, image=img)
+canvas.create_image(WIDTH/2 + 3, HEIGHT/2, image=img)
 canvas.pack()
 
 window.mainloop()
