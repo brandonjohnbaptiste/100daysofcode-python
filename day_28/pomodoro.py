@@ -22,7 +22,7 @@ timer_label = Label(window, text='Timer', font=(FONT_NAME, 50, 'bold'), fg=GREEN
 canvas = Canvas(window, width=WIDTH, height=HEIGHT)
 img = PhotoImage(file='tomato.png')
 canvas.create_image(WIDTH/2 + 3, HEIGHT/2, image=img)
-canvas.create_text(WIDTH/2, HEIGHT/2 + 20, text='00:00', fill='white', font=(FONT_NAME, 35, 'bold'))
+timer = canvas.create_text(WIDTH/2, HEIGHT/2 + 20, text='00:00', fill='white', font=(FONT_NAME, 35, 'bold'))
 
 start_btn = Button(window, text='Start')
 reset_btn = Button(window, text='Reset')
@@ -33,6 +33,16 @@ canvas.grid(column=1, row=1)
 start_btn.grid(column=0, row=2)
 reset_btn.grid(column=2, row=2)
 tick_label.grid(column=1, row=3)
+
+
+def count_down(count):
+    canvas.itemconfig(timer, text=count)
+    if count > 0:
+        window.after(1000, count_down, count - 1)
+
+
+def start_counter():
+    count_down(5)
 
 
 window.mainloop()
