@@ -67,3 +67,4 @@ in addition to leetcode challenges
 - Created a function for finding 'happy' numbers
 - Created a function for finding if an array has any duplicate videos
 - Created a function for finding the length of the last word of a string
+- Started working on a Pomodoro timer app
